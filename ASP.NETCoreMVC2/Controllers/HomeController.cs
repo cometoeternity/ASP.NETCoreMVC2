@@ -18,9 +18,13 @@ namespace ASP.NETCoreMVC2.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public ViewResult Index()
         {
-            return View();
+            int hour = DateTime.Now.Hour;
+            string day = DateTime.Now.DayOfWeek.ToString();
+            ViewBag.Hour = hour < 12 ? "Good Morning" : "Good Afternoon";
+            ViewBag.Day = day;
+            return View("MyView");
         }
 
         public IActionResult Privacy()
