@@ -26,6 +26,10 @@ namespace ASP.NETCoreMVC2.Controllers
             ViewBag.Day = day;
             return View("MyView");
         }
+        public ViewResult RsvpForm()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {

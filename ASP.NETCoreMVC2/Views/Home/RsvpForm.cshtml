@@ -1,0 +1,40 @@
+﻿@model Guests
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Форма Подтверждения</title>
+</head>
+<body>
+    <div>
+        Это форма заполения информации о гостях и подтверждение присутствия
+    </div>
+    <form asp-action="RsvpForm" method="post">
+        <p>
+            <label asp-for="Name">Ваше имя:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Ваша почта:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Ваш телефон:</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label> Будете присутстовать?</label>
+            <select asp-for="WillAttend">
+                <option value="">Выберете вариант</option>
+                <option value="true">Да, я буду присутствовать</option>
+                <option value="false">Нет, я не буду присутствовать</option>
+            </select>
+        </p>
+        <button type ="submit">Принять и отправить</button>
+    </form>
+    <p><a asp-action="Index">Главная страница</a></p>
+</body>
+</html>
