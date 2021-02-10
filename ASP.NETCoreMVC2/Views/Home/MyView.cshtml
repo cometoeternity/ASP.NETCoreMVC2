@@ -6,10 +6,13 @@
 <head>
     <meta name="viewport" content="width=device-width"/>
     <title>Главная страница</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
     </head>
 <body>
-    <div>@ViewBag.Hour ASP.NET From View</div>
-    <div>@ViewBag.Day - best day to learn ASP.NET Core!</div>
-    <a asp-action="RsvpForm"> Форма заполнения гостей и подтверждения присутствия</a>
+    <div class="text-center">
+        <h3>Мы собираемся устроить великолепную вечеринку!</h3>
+        <h4>И вы приглашены!</h4>
+        <a class="btn btn-primary" asp-action="RsvpForm"> Форма заполнения гостей и подтверждения присутствия</a>
+    </div>  
 </body>
 </html>

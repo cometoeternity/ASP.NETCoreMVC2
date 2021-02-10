@@ -1,0 +1,26 @@
+﻿@model Guests
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Спасиюо за ответ</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
+</head>
+    <body class="text-center">
+    <p>
+        <h1> Спасибо за ответ, @Model.Name!</h1>
+        @if(Model.WillAttend==true)
+        {
+            @:Будем рады вас увидеть на нашем мероприятии. Напитки уже охлаждаются!
+        }
+         else
+        {
+            @:Обидно знать, что вас не будет :( В любом случае благодарим за ответ.
+        }
+    </p>
+    <p>Нажмите <a class="nav-link" asp-action="ListResponses">сюда</a>чтобы увидеть, кто будет на вечеринке.</p>
+</body>
+</html>
